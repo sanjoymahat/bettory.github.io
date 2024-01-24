@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=divec-width,initial-scale=1.0">
+    <meta name="keywords" content="HTML CSS BOOTSTRAP">
+    <meta name="Description" content="well its my first time login page use glassmorphisam">
+    <title>css longin page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <section class="scc">
+    <div class="box">
+      <div class="content">
+        <h3>Battery</h3>
+        <div class="batteryshape">
+          <div class="level">
+            <div class="percentage"></div>
+          </div>
+        </div>
+        <div class="percent">50%</div>
+      </div>
+    </div>
+
+  </section>
+  <script>
+    let percentage=document.querySelector('percentage');
+    let percentage=document.querySelector('percent');
+    navigator.getbattery().then(function(Battery){
+      percentage.style.width=Battery.level+'%';
+      })
+  </script>
+</body>
+</html>
